@@ -2,21 +2,25 @@
 # this code sets up the lists you will need for your homework
 # and provides some examples of operations that will be helpful to you
 
+# Modified by Scott Schulze 
+# 9/13/2020
+
+
 # %%
 # Import the modules we will use
 import os
 import numpy as np
-import pandas as pd
+import pandas 
 import matplotlib.pyplot as plt
 
 print("all good here!")                 # Making sure everything loads properly
 # %%
 # ** MODIFY **
 # Set the file name and path to where you have stored the data
-filename = 'streamflow_longterm.txt'
-filepath = os.path.join('../data', filename)
+filename = 'streamflow_week3.txt'
+fpath = os.path.join('../data', filename)
 print(os.getcwd())
-print(filepath)
+print(fpath)
 
 # %%
 # DON'T change this part -- this creates the lists you 
@@ -25,7 +29,7 @@ print(filepath)
 # this in later sections. 
 
 #Read the data into a pandas dataframe
-data=pd.read_table(filepath, sep = '\t', skiprows=30,
+data=pandas.read_table(fpath, sep = '\t', skiprows=30,
         names=['agency_cd', 'site_no', 'datetime', 'flow', 'code']
         )
 
@@ -49,14 +53,15 @@ del(data)
 # Here is some starter code to illustrate some things you might like to do
 # Modify this however you would like to do your homework. 
 # From here on out you should use only the lists created in the last block:
-# flow, date, yaer, month and day
+# flow, date, yearr, month and day
 
 # Calculating some basic properites
-print(min(flow))
-print(max(flow))
+print(min(flow),"cfs")      # added 'cfs' to the end, units are everything!
+print(max(flow),"cfs")
 print(np.mean(flow))
 print(np.std(flow))
 
+# %% 
 # Making and empty list that I will use to store
 # index values I'm interested in
 ilist = []
@@ -72,6 +77,7 @@ for i in range(len(flow)):
 # of the index list that was generated
 print(len(ilist))
 
+# %%
 # Alternatively I could have  written the for loop I used 
 # above to  create ilist like this
 ilist2 = [i for i in range(len(flow)) if flow[i] > 600 and month[i]==7]
@@ -81,3 +87,18 @@ print(len(ilist2))
 # This  subset of data is just the elements identified 
 # in the ilist
 subset = [flow[j] for j in ilist]
+
+# %%
+
+# answering question 1.
+print(type(flow))
+print(type(year))
+print(type(month))
+print(type(day))
+
+print(len(flow))
+print(len(year))
+print(len(month))
+print(len(day))
+
+# %%

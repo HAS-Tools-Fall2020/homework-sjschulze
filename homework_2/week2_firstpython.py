@@ -9,12 +9,17 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import os
 
+print("All done here!")
 # %% 
 # Step 3 - Read in the file in as dataframe
 # You will need to change the filename to match what you downloaded
-filename = 'streamflow_week1.txt'
+filename = 'streamflow_week2.txt'
+path="/c/Users/F15Ea/Documents/School/Graduate School/Fall 2020/HAS Tools/homework-sjschulze/"
 filepath = os.path.join('data', filename)
+print(filename)
+print(filepath)
 
+# %%
 data=pd.read_table(filepath, sep = '\t', skiprows=30, 
         names=['agency_cd', 'site_no', 'datetime', 'flow', 'code']
         )
