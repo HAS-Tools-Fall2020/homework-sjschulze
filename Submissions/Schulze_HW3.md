@@ -1,5 +1,12 @@
 ## Scott Schulze, 9//2020, Homework #3
 
+---------
+# Grade
+
+3/3 -  Nice work!  I like your logic
+Next time try doing a little more formatting on your markdown submission for practice with that. 
+
+---
 
 1)
 
