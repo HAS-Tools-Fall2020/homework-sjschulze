@@ -1,7 +1,7 @@
 ## Scott Schulze, 9/27/2020, Homework #5
 ___
 ### Grade
-3/3 - Nice work. I'm glad you were able to get the histograms made. Next time try previewing your markdown file so t hat you can check your formatting a bit.  You can do  this by using control-shift-m in atom.  Also next time try including images in your markdown  file.
+3/3 - Nice job. Don't worry we will get to the long range  forecast more as we move  into the second part of the class. 
 
 ___
 
