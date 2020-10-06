@@ -1,5 +1,12 @@
 ## Scott Schulze, 10/4/2020, Homework #6
 
+___
+### Grade
+3/3 - Wow strong words. I'm sorry to hear it was  such a rough week for you. You actually did a really great job setting up these models. It's very hard to get good results with only the historical streamflow. Many other  students also decided not to use their models this week for the same reason. 
+
+Note - you need to copy your assets folder in with the markdown file for the graphs to work. I copied it in here for you to show.
+___
+
 Welcome to the land of confusion, despair, and disgust acting as a repository for this assignment.
 
 
@@ -18,5 +25,5 @@ Figure 2. Log-Log plot of model data versus actual observations. The curve in th
 
 ![](assets/Schulze_HW6-6d713dc6.png)
 
-Figure 3. Observations versus model outputs for the the period. 
+Figure 3. Observations versus model outputs for the the period.
 3. I ended up making my own forecasts, simply because I was frustrated, noting getting useful results, and running out of time. To make my forecast, I analyzed the last two week's daily observations and compared to the last two week's average values to get an idea of if the flow is trending up or down.
