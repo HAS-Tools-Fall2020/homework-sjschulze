@@ -1,6 +1,7 @@
 # Scott Schulze
-# 10/9/2020
-# Forecasting code for week 7, using an AR model, as run by a classmate
+# 10/15/2020
+# Forecasting code for week 8, using an AR model, as run, reviewed,
+# and evlauated by the professor.
 
 # %%
 # Import the modules  and libraries we will use and set aliases
@@ -18,21 +19,34 @@ def predictions(previous_flow):
     Then uses the previously calculated model intercept and coefficient
     to find the first week's prediction. Then uses the first prediction to
     make the predicition for the second week's forecast. Before returning
-    both forecast values.
+    both forecast values. As of 10/15/2020, this function was expanded to
+    allow for a 16 week forecast, to keep the model from diverging too
+    sharply, the week 3-16 forecasts utilized the model forecast output from
+    week 2 as the basis for prediction.
+
+    Variables:
+    previous_flow: previous_flow is given to the function as the average flow
+    from the previous week and is the initialization point for
+    prediction: prediction is an array, set to the size of the forecasts being
+    generated, the outputs from the model are stored here.
     '''
-    prediction = np.zeros(2)
-    prediction[0] = model.intercept_ + model.coef_ * previous_flow
-    prediction[1] = model.intercept_ + model.coef_ * prediction[0]
+    prediction = np.zeros(16)
+    for i in range(len(prediction)):
+        if i == 0:
+            prediction[i] = model.intercept_ + model.coef_ * previous_flow
+        elif i == 1:
+            prediction[i] = model.intercept_ + model.coef_ * prediction[i-1]
+        else:
+            prediction[i] = model.intercept_ + model.coef_ * prediction[1]
     return prediction
 
 # %%
-# ** MODIFY **
-# Set the file name and path to where you have stored the data
+# # Set the file name and path to where you have stored the most recent data
 # Change this for your personal system
 
 
-filename = 'streamflow_week6.txt'
-filepath = os.path.join('../../data', filename)
+filename = 'streamflow_week7.txt'
+filepath = os.path.join('../data', filename)
 print(os.getcwd())
 print(filepath)
 
@@ -98,12 +112,14 @@ print('slope:', np.round(model.coef_, 2))
 
 # %%
 # Step 4 Make a prediction with your model
-# Using the function here to predict week 1 and 2 flows
+# Using the function here to predict week 1 and 2 flows, given from the
+# previous week's average flow. This is meant to be run by the person entering
+# the forecast for the week, and is therefore very explicit, if repititious.
 
 flow_prediction = predictions(lwf.values)
-print(flow_prediction.round(1))
-print("Please enter ", flow_prediction[0].round(1),
-      " for the week 1 forecast.")
-print("Please enter ", flow_prediction[1].round(1),
-      " for the week 2 forecast.")
+for i in range(len(flow_prediction)):
+    print("Please enter ", flow_prediction[i].round(1),
+          " for the week ", i+1, " forecast.")
+    print(" ")
+
 # %%
