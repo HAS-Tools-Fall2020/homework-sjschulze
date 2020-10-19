@@ -44,7 +44,7 @@ def predictions(previous_flow):
 # # Set the file name and path to where you have stored the most recent data
 
 
-filename = 'streamflow_week8.txt'
+filename = 'streamflow_week6.txt'
 filepath = os.path.join('../../data', filename)
 print(os.getcwd())
 print(filepath)
