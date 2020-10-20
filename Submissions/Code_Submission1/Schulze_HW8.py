@@ -13,7 +13,7 @@ from sklearn.linear_model import LinearRegression
 # %%
 # Build a function for flow prediction
 
-
+# LC - Really great function!
 def predictions(previous_flow):
     ''''This function is given the previous week's flow value as an input
     Then uses the previously calculated model intercept and coefficient
@@ -84,12 +84,15 @@ flow_weekly['flow_tm2'] = flow_weekly['flow'].shift(2)
 # Step 2: Pick what portion of the time series you want to use for training.
 # Training using a set of the lowest 275 weeks. This was to mitigate
 # underforecast error, without increasing the r^2 value further.
+
 train_low = flow_weekly[['flow', 'flow_tm1',
                          'flow_tm2']].sort_values(by='flow', ascending=False)
+# LC - could be good to set this as a variable for the user. 
 train_low_data = train_low.tail(275)
 
 # %%
 # Step 3: Fit a linear regression model using sklearn
+# LC - this would also be a good step to put in a function
 model = LinearRegression()
 # See the tutorial to understand the reshape step here
 

@@ -1,5 +1,15 @@
 ## Scott Schulze, 10/18/2020, Homework #8 aka code review #1 readme
 
+#### Grade 
+ - 6/6  Great  job!
+ - Readability: 3
+ - Style: 3 
+ - Code: 3
+
+ - Really nice work, I  agree your function is very suscinct. I like you approach. 
+ - I made just a few comments. 
+ 
+
 # Model summary
 
 The AR model that I built is a simple lag-2 autoregression. This was done to keep things as simple as possible with respect to the regressions. The dataset that I used to train the model however was tuned from 200 that I had originally used with my reviewer to 275. The 275 data points chosen were the 275 lowest flow weeks of the dataset, and was increased to 275 to help mitigate the under-forecasting of the model without an increase in the spread (r^2) of the data.
