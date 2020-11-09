@@ -20,9 +20,9 @@ file = os.path.join('../data', 'gagesII_9322_sept30_2011.shp')
 gages = gpd.read_file(file)
 
 # Inspect to be sure it is what I am looking for
-type(gages)
-gages.head()
-gages.columns
-gages.shape
+print(type(gages))
+print(gages.head())
+print(gages.columns)
+print(gages.shape)
 
 # %%
