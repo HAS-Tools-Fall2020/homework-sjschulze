@@ -5,7 +5,7 @@
 # Import libraries
 import os
 import matplotlib.pyplot as plt
-import goepandas as gpd
+import geopandas as gpd
 import earthpy as et
 
 # %%
