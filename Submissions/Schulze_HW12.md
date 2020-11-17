@@ -1,5 +1,8 @@
 ## Scott Schulze, 11-16-2020, Homework week 12
 
+### Grade
+3/3 - I know this was a tough one. Good work getting it pulled together in  the end. 
+
 #1)
 This week I forecasted by my own intuition because I lagged in getting the data used in the assignment for so long.
 
