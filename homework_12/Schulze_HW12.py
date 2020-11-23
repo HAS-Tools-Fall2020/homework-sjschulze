@@ -26,6 +26,10 @@ import shapely
 from netCDF4 import Dataset
 import os
 
+<<<<<<< Updated upstream
+=======
+# %%
+>>>>>>> Stashed changes
 # %%
 # Build a function for flow prediction
 
@@ -89,7 +93,11 @@ print(lwf)
 # Bring in the historical data
 # Net CDF file historical time series
 data_path = os.path.join('../data',
+<<<<<<< Updated upstream
                          'daily_temp.nc')
+=======
+                         'Daily_temp.nc')
+>>>>>>> Stashed changes
 
 # Read in the dataset as an x-array
 dataset = xr.open_dataset(data_path)
@@ -99,7 +107,11 @@ dataset
 # We can inspect the metadata of the file like this:
 metadata = dataset.attrs
 metadata
+<<<<<<< Updated upstream
 
+=======
+# %%
+>>>>>>> Stashed changes
 # And we can grab out any part of it like this:
 metadata['dataset_title']
 metadata['history']
@@ -142,12 +154,27 @@ one_point.plot.line(hue='lat',
                     marker="o",
                     ax=ax,
                     color="grey",
+<<<<<<< Updated upstream
                     markerfacecolor="blue",
                     markeredgecolor="blue")
 ax.set(title="Temperature Time Series For a Single Lat / Lon Location")
+=======
+                    markerfacecolor="purple",
+                    markeredgecolor="purple")
+ax.set(title="Time Series of Pressure For a Single Lat / Lon Location")
+>>>>>>> Stashed changes
 
-#Conver to dataframe
+# Convert to dataframe
 one_point_df = one_point.to_dataframe()
+
+# Aggregate pressure values to weekly
+pres_weekly = one_point_df.resample("W", on='datetime').mean()
+
+# Find the last week's flow. This is used by the function to make the
+# prediction for the first week, then the subsequent weeks follow from there.
+
+lwp = pres_weekly[['pressure']].tail(2)
+print(lwp)
 
 # %%
 lwt = one_point_df['air'].tail(7).mean()-273.15
@@ -205,14 +232,27 @@ print('coefficient of determination:', np.round(r_sq, 2))
 # the forecast for the week, and is therefore very explicit, if repititious.
 
 flow_prediction = predictions(lwf.values)
+<<<<<<< Updated upstream
 if use_historical == True:
     for i in range(len(flow_prediction)):
         print("Please enter ", flow_prediction[i].round(2)+5,
             " for the week ", i+1, " forecast.")
+=======
+# Set this using the mean pressure value
+if lwp >= meanp:
+    use_historical == True
+else:
+    use_historical == False
+
+if use_historical is True:
+    for i in range(len(flow_prediction)):
+        print("Please enter ", flow_prediction[i].round(2),
+              " for the week ", i+1, " forecast.")
+>>>>>>> Stashed changes
         print(" ")
 else:
     for i in range(len(flow_prediction)):
-        print("Please enter ", flow_prediction[i].round(2),
-            " for the week ", i+1, " forecast.")
+        print("Please enter ", flow_prediction[i].round(2) + 3,
+              " for the week ", i+1, " forecast.")
         print(" ")
 # %%

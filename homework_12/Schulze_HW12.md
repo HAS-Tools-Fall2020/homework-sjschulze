@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 ## Scott Schulze, 11-16-2020, Homework week 12
 
 #1)
@@ -10,3 +11,11 @@ I have already stated the temporal resolution and extent, but the spatial extent
 #3)
 Time series of the temperature dataset
 ![alt text](Temperature_time_series.png)
+=======
+## Scott Schulze, 11/12/2020, Homework #12
+
+#1)
+I chose to guess my own flow forecasts for this week, due to a shortage of time and not having confidence in my code for this week.
+
+#2)
+>>>>>>> Stashed changes
