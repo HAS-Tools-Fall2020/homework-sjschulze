@@ -1,5 +1,8 @@
 ## Scott Schulze, 11-29-2020, Homework week 14
 
+## Grade
+3/3 - nice work.
+
 1. What is the paper or project you picked? Include a title, a link the the paper and a 1-2 sentence summary of what its about.
 
 The paper I found was: "Predicting cell-to-cell communication networks using NATMI" https://www.nature.com/articles/s41467-020-18873-z#code-availability
@@ -17,7 +20,7 @@ The code had no comments or documentation.
 
 4. Summarize your experience trying to work with their repo: What happened? Where  you successful? Why or why not?
 
-I was not able to run the code in the hour time limit, because I did not have the necessary libraries to get the code to function. I attempted to download the libraries but was also unsuccessful. 
+I was not able to run the code in the hour time limit, because I did not have the necessary libraries to get the code to function. I attempted to download the libraries but was also unsuccessful.
 
 5. Summarize your experience working with the data associated with this research. Could you access the data? Where was it? Did it have a DOI? What format was it in?
 
