@@ -93,11 +93,7 @@ print(lwf)
 # Bring in the historical data
 # Net CDF file historical time series
 data_path = os.path.join('../data',
-<<<<<<< Updated upstream
                          'daily_temp.nc')
-=======
-                         'Daily_temp.nc')
->>>>>>> Stashed changes
 
 # Read in the dataset as an x-array
 dataset = xr.open_dataset(data_path)
@@ -107,11 +103,6 @@ dataset
 # We can inspect the metadata of the file like this:
 metadata = dataset.attrs
 metadata
-<<<<<<< Updated upstream
-
-=======
-# %%
->>>>>>> Stashed changes
 # And we can grab out any part of it like this:
 metadata['dataset_title']
 metadata['history']
