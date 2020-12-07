@@ -1,0 +1,31 @@
+start=199701010000&end=202012030000&obtimezone=UTC&vars=air_temp&stids=QVDA3&units=temp%7CF&token=8a9ebdf8eaba4686b060300750c1658a
+http://api.mesowest.net/v2/stations/timeseries?start=199701010000&end=202012030000&obtimezone=UTC&vars=air_temp&stids=QVDA3&units=temp%7CF&token=8a9ebdf8eaba4686b060300750c1658a
+ok
+ok
+1249
+ok
+Last week's average temperature was                             Temperature
+2020-12-06 00:00:00+00:00         41.5 $^\circ$F.
+<class 'pandas.core.frame.DataFrame'>
+DatetimeIndex: 1614 entries, 1990-01-07 to 2020-12-06
+Freq: W-SUN
+Data columns (total 6 columns):
+ #   Column     Non-Null Count  Dtype  
+---  ------     --------------  -----  
+ 0   site_no    1614 non-null   float64
+ 1   flow       1614 non-null   float64
+ 2   year       1614 non-null   float64
+ 3   month      1614 non-null   float64
+ 4   day        1614 non-null   float64
+ 5   dayofweek  1614 non-null   float64
+dtypes: float64(6)
+memory usage: 88.3 KB
+coefficient of determination: 0.44
+intercept: 31.26
+slope: [0.43]
+0
+Please enter  185.1  for the week  1  forecast.
+ 
+1
+Please enter  157.1  for the week  2  forecast.
+ 
