@@ -1,5 +1,8 @@
 ## Scott Schulze, 12/07/2020, Homework #15
 
+### Grade
+3/3 - Great work! I'm so happy to hear that you had a good experience and that you got something out of it!  I wish we had more time to talk about parallel computing but there is definitely a lot more we could do there. 
+
 # The end of the line
 Good (insert proper greeting for time of grading here) Laura,
 Thank you for the great semester. It was a fantastic experience despite all of
